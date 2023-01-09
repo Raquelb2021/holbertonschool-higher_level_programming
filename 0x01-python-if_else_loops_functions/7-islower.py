@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 def islower(c):
-    print(c.islower())
+    if ord(c) > 96:
+        return True
