@@ -6,6 +6,7 @@ if len(sys.argv) == 1:
 else:
     print("{:d} argument".format(len(sys.argv) - 1), end="")
 if len(sys.argv) > 2:
+    print("s", end="")
     print(":")
 for a in range(1, len(sys.argv)):
     print("{:d}: {:s}".format(a, sys.argv[a]))
