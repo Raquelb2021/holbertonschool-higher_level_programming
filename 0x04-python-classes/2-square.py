@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """square area"""
+
+
 class Square:
     """Private instance attribute: size"""
 
