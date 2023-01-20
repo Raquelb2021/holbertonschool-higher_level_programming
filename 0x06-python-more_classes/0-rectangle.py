@@ -3,6 +3,7 @@
 
 
 class Rectangle:
+    """Class rectangle"""
     def __init__(self, width=0, height=0):
         """This __init__ method execute after create an object"""
         self.height = height
