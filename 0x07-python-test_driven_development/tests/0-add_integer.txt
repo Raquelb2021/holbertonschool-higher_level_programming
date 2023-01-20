@@ -10,18 +10,69 @@ first import ``aa_integer`` from the ``add_integer`` module:
 
 Now use it:
 
-    >>> add_integer(1, 2)
-        3
+Test 1 adding two integers
+--------------------------
+    >>> add_integer(3, 1)
+    4
 
-    >>> add_integer(100, -2)
-        98
+Test 2 adding float with integer cast to the small int value
+    >>> add_integer(3.4, 2)
+    5
 
-    >>> add_integer(2)
-        100
+Test 3 adding int with str 
+--------------------------
+    >>> add_integer("3", 4)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-    >>> add_integer(100.3, -2)
-        98
+Test 4 adding str with int
+--------------------------
+    >>> add_integer(3, "4")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
-    >>> add_integer(4, "School")
-
+Test 6 adding just first parameter as None
+------------------------------------------
     >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Test_7 adding negative numbers
+------------------------------
+    >>> add_integer(-3, -4)
+    -7
+
+Test_8 adding negative float numbers
+------------------------------------
+    >>> add_integer(-3.4, -4.6)
+    -7
+
+Test_9 second argument as None
+------------------------------
+    >>> add_integer(-3.4, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+Test_10 both arguments as strings
+---------------------------------
+    >>> add_integer("-3.4", "3")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+Test_11 more than two arguments
+-------------------------------
+    >>> add_integer(3, 234, 65)
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Test_12 No arguments
+--------------------
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Test_13 first argument as string
+--------------------------------
+     >>> add_integer("Ola")
+     Traceback (most recent call last):
+     TypeError: a must be an integer
