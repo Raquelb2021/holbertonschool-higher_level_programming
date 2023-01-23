@@ -57,12 +57,12 @@ class Rectangle:
             return string
         else:
             new = []
-            for i in range(0, self.__height):
-                new.append('#' * self.width)
-            if i < (self.__height - 1):
-                new.append('\n')
-        return string.join(new)
+            for i in range(self.height):
+                new.append('#' * self.__width)
+                if i < (self.height - 1):
+                    new.append('\n')
+            return string.join(new)
 
     def __repr__(self):
         """returns the object representation in string format"""
-        return 'Rectangle({:d}, {:d})'.format(self.__width, self.__height)
+        return("Rectangle({:d}, {:d})".format(self.__width, self.__height))
