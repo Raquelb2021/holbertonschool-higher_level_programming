@@ -1,0 +1,4 @@
+"""
+This module defines a matrix divided function def matrix_divided(matrix, div):
+"""
+
