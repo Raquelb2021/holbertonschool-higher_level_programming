@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This program defines a rectangle and return area and perimeter"""
+
+
 class Rectangle:
     """class Rectangle"""
     def __init__(self, width=0, height=0):
