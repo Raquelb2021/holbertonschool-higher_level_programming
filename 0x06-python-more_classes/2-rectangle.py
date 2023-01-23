@@ -58,7 +58,7 @@ class Rectangle:
         else:
             new = []
             for i in range(self.height):
-                new.append('#' * self.width)
+                new.append('#' * self.__width)
                 if i < (self.height - 1):
                     new.append('\n')
             return string.join(new)
