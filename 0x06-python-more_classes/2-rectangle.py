@@ -1,70 +1,48 @@
 #!/usr/bin/python3
-"""This program gets the perimeters of a retangle"""
-
-
 class Rectangle:
-    """class Rectangle"""
+    """ class that defines a rectangle """
     def __init__(self, width=0, height=0):
-        """method that execute after create an object"""
-        self.height = height
+        """ constructor """
         self.width = width
+        self.height = height
 
+    @property
+    def width(self):
+        """ getter """
+        return self.__width
 
-@property
-def width(self):
-    """getter"""
-    return self.__width
+    @width.setter
+    def width(self, value):
+        """ setter """
+        if type(value) not in [int]:
+            raise TypeError("width must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = value
 
+    @property
+    def height(self):
+        """ getter """
+        return self.__height
 
-@width.setter
-def width(self, value):
-    """setter"""
-    if not isinstance(value, int):
-        raise TypeError('width must be an integer')
-    elif value < 0:
-        raise ValueError('width must be >= 0')
-    else:
-        self.__width = value
+    @height.setter
+    def height(self, value):
+        """ setter """
+        if type(value) not in [int]:
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = value
 
+    def area(self):
+        """ Public instance method that returns the rectangle area """
+        return self.width * self.height
 
-@property
-def height(self):
-    """getter"""
-    return self.__height
-
-
-@height.setter
-def height(self, value):
-    """setter"""
-    if not isinstance(value, int):
-        raise TypeError('width must be an integer')
-    elif value < 0:
-        raise ValueError('width must be >= 0')
-    else:
-        self.__height = value
-
-
-def area(self):
-    """public instance method, that returns the rectangle area"""
-    return (self.__height * self.__width)
-
-
-def perimeter(self):
-    """public intance method, that returns the rectangle perimeter"""
-    if self.__height == 0 or self.__width == 0:
-        return 0
-    else:
-        return (self.__height + self.__width * 2)
-
-
-def __str__(self):
-    """ print the rectangle with the character #"""
-    string = ''
-    if self.__heoght == 0 or self.__width == 0:
-        return string
-    else:
-        for i in range(0, self.__height):
-            string = string + "{}".format('#'*self.__width)
-            if i != self.__height - 1:
-                string = string + '\n'
-        return (string)
+    def perimeter(self):
+        """ Public instance method that returns the rectangle perimeter """
+        if self.width == 0 or self.height == 0:
+            return 0
+        else:
+            return (self.width * 2) + (self.height * 2)

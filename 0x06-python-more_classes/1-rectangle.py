@@ -46,7 +46,7 @@ def height(self, value):
 
 def area(self):
     """public instance method, that returns the rectangle area"""
-    return (self.__width * self.__height)
+    return (self.__height * self.__width)
 
 
 def perimeter(self):
