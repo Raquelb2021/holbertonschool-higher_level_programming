@@ -3,9 +3,9 @@
 
 
 class Square:
-"""initializes a square"""
 
     def __init__(self, size=0):
+        """initializes a square"""
         self.__size = size
 
     @property
