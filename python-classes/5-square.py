@@ -1,23 +1,21 @@
 #!/usr/bin/python3
-
+"""Define a class Square"""
 
 class Square:
+    """class square"""
 
-    """"Define a class square"""
 
     def __init__(self, size=0):
-        """initialize teh data"""
+        """initialize the data"""
         self.__size = size
 
     @property
     def size(self):
-        """Getter"""
+        """Getter and setter"""
         return (self.__size)
 
     @size.setter
     def size(self, value):
-        """setter"""
-
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
