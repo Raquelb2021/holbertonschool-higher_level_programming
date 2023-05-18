@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Defines a class square"""
 
 
 class Square:
 
-    """initialize a class square"""
+    """"Define a class square"""
 
     def __init__(self, size=0):
+        """initialize teh data"""
         self.__size = size
 
     @property
@@ -15,8 +15,9 @@ class Square:
         return (self.__size)
 
     @size.setter
-    """setter"""
     def size(self, value):
+        """setter"""
+
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
