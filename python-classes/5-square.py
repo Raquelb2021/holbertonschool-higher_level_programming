@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Define a class Square"""
 
+
 class Square:
     """class square"""
-
 
     def __init__(self, size=0):
         """initialize the data"""
@@ -28,8 +28,8 @@ class Square:
 
     def my_print(self):
         """ prints in stdout the square with the character #"""
-        for i in range(self.size):
-            print("#" * self.size)
-
+        for i in range(self.__size):
+            [print("#", end="") for j in range(self.__size)]
+            print("")
             if self.__size == 0:
-                print()
+                print("")
