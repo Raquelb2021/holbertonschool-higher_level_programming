@@ -26,6 +26,7 @@ class Square:
         return (self.__size ** 2)
 
     def my_print(self):
+        """ prints in stdout the square with the character #"""
         for i in range(self.size):
             print("#" * self.size)
 
