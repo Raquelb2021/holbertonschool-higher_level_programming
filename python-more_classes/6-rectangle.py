@@ -77,4 +77,3 @@ class Rectangle:
         """Rectangle class is deleted"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
-
