@@ -8,17 +8,16 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle"""
 
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def width(self):
-        """Get the width of the rectangle."""
+        """Get the width of the Rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """set the width of the rectangle"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -27,12 +26,11 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get the height of the rectangle."""
+        """Get the height of the Rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """set the height of the rectangle"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -40,22 +38,26 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.__width * self.__height
+        """Return the area of the Rectangle."""
+        return (self.__width * self.__height)
 
     def perimeter(self):
+        """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
-            return 0
-        else:
-            return 2 * (self.__width + self.__height)
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
+        """str and the __str__ method convert the object into a string
 
-         if self.__width == 0 or self.__height == 0:
+        And print the rectangle with the character "#"
+        """
+        if self.__width == 0 or self.__height == 0:
             return ("")
 
-         lines = []
-         for i in range(self.__height):
-             [lines.append("#") for j in range(self.__width)]
-             if i != self.__height - 1:
-              lines.append("\n")
-              return ("".join(lines))
+        rect = []
+        for i in range(self.__height):
+            [rect.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
