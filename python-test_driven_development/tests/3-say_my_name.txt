@@ -19,7 +19,7 @@ My name is Bredon Silva
 if the paremeter ```last_name``` is not provided, an empty string is printed instead.
 
 >>> say_my_name("Hadassa")
-My namae is Hadassa
+My name is Hadassa
 
 Error names
 
@@ -30,7 +30,7 @@ Traceback (most recent call last):
 TypeError: first_name must be a string
 
 
->>> say_my_name(5.6 : "Anna", Bruna: 8)
+>>> say_my_name(5.6: "Anna", Bruna: 8)
 Traceback (most recent call last):
 TypeError: first_name must be a string
 
