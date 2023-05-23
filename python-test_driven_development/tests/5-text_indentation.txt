@@ -1,0 +1,47 @@
+=====================
+5-text_indentation.py
+=====================
+
+This module the function print a text with two new lines after each of the character '.', '?', ':'.
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Hi?")
+Hi?
+<BLANKLINE>
+
+There should be no space at the beginning or at the end of each printed line.
+
+>>> text_indentation("   Hello everyone.")
+Hello everyone.
+<BLANKLINE>
+
+>>> text_indentation("     ")
+
+	No spaces are printed at the end of each printed line.
+
+>>> text_indentation("Hi.    ")
+Hello.
+<BLANKLINE>
+
+New lines without these characters are printed as normal.
+
+>>> text_indentation("This type of string is accetable!:\nLook.")
+This type of string is accetable!
+<BLANKLINE>
+Look.
+<BLANKLINE>
+
+
+Possible invalid texts
+======================
+
+
+text must be a string, otherwise raise a TypeError
+
+>>> text_indentation(5)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
