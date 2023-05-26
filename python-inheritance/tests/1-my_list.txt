@@ -30,3 +30,5 @@ This module defines a class MyList that inherits from list:
 >>> my_list = MyList()
 >>> my_list.print_sorted()
 []
+
+>>> print(my_list)
