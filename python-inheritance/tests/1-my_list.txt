@@ -18,3 +18,7 @@ This module defines a class MyList that inherits from list:
 >>> my_list.append(5)
 >>>print(my_list)
 [1, 4, 3, 2, 5]
+
+>>> my_list = MyList([1, 2, 3])
+>>> prpint(my_list)
+[1, 2, 3]
