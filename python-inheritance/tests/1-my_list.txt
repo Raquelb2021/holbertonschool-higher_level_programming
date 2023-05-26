@@ -33,5 +33,3 @@ This module defines a class MyList that inherits from list:
 
 >>> print(my_list)
 []
-
->>> return sorted(self)
