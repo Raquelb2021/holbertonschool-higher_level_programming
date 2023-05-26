@@ -9,4 +9,3 @@ def is_kind_of_class(obj, a_class):
     """is an instance of the specified class"""
     """or an instance of a subclass of the specified class"""
     return isinstance(obj, a_class)
-
