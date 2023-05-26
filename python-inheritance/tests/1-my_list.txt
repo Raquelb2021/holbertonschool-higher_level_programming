@@ -36,7 +36,7 @@ This module defines a class MyList that inherits from list:
 
 >>> my_list = MyList()
 >>> my_list.append(1)
->>> my_list.append(4)
 >>> my_list.append(2)
+>>> my_list.append(4)
 >>> print(my_list)
 [1, 2, 4]
