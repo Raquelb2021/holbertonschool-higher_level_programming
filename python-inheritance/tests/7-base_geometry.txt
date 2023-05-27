@@ -6,12 +6,15 @@ This module write a class Rectangle that inherits from BaseGeometry
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
->>> bg.area()
-Traceback (most recent call last):
-
+>>> Type(bg)
+<class '7-base_geometry.BaseGeometry'>
 ...
 
+>>> bg.area()
+Traceback (most recent call last):
 Exception: area() is not implemented
+
+>>> print(bg.integer_validator)
 
 >>> bg.integer_validator("test", 5)
 >>> bg.integer_validator("test", "not an integer")
