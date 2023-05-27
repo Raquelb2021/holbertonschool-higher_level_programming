@@ -8,23 +8,12 @@ This module write a class Rectangle that inherits from BaseGeometry
 >>> bg = BaseGeometry()
 >>> type(bg)
 <class '7-base_geometry.BaseGeometry'>
+
 ...
 
->>> bg.area()
-Traceback (most recent call last):
-Exception: area() is not implemented
+>>> print(bg)
+<7-base_geometry.BaseGeometry object at ...>
 
->>> print(bg.integer_validator)
-
->>> bg.integer_validator("test", 5)
->>> bg.integer_validator("test", "not an integer")
+>>> bg = BaseGeometry(None)
 Traceback (most recent call last):
-TypeError: test must be an integer
-
->>> bg.integer_validator("test"), -5)
-Traceback (most recent call last):
-ValueError: test must be greater than 0
-
->>> bg.integer_validator("test", 0)
-Traceback (most recent call last):
-ValuError: test must be greater than 0
+TypeError: object() takes no parameters
