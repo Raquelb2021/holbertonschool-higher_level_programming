@@ -1,0 +1,16 @@
+===========================
+7-base_geometry.py
+===========================
+
+This module write a class Rectangle that inherits from BaseGeometry
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> Bgeo = BaseGeometry()
+>>> type(Bgeo)
+<class '7-base_geometry.BaseGeometry'>
+
+...
+
+>>> bgeo = BaseGeometry(None)
+Traceback (most recent call last):
+TypeError: object() takes no parameter
