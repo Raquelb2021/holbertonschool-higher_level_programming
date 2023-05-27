@@ -2,7 +2,10 @@
 7-base_geometry.py
 ===========================
 
-This module write a class Rectangle that inherits from BaseGeometry
+This is the BaseGeometry class.
+
+`BaseGeometry` includes no attributes, and accordingly is initialized
+    with no arguments.
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
@@ -11,9 +14,39 @@ This module write a class Rectangle that inherits from BaseGeometry
 
 ...
 
->>> print(bg)
-<7-base_geometry.BaseGeometry object at ...>
+Methods
+=======
 
->>> bg = BaseGeometry(None)
+area
+----
+
+The `area` method raises an Exception with the message 'area() is not implemented'.
+
+...
+
+>>> bg.area()
 Traceback (most recent call last):
-TypeError: object() takes no parameters
+Exception: area() is not implemented
+
+integer_validator
+-----------------
+
+The `integer_validator` method validates value:
+        - if value is not an integer: raise a TypeError exception,
+          with the message <name> must be an integer
+        - if value is less or equal to 0: raise a ValueError exception
+          with the message <name> must be greater than 0
+
+
+>>> bg.integer_validator("test", 5)
+>>> bg.integer_validator("test", "not an integer")
+Traceback (most recent call last):
+TypeError: test must be an integer
+
+>>> bg.integer_validator("test", -5)
+Traceback (most recent call
+ValueError: test must be greater than 0
+
+>>> bg.integer_validator("test", 0)
+Traceback (most recent call last):
+ValueError: test must be greater than 0
