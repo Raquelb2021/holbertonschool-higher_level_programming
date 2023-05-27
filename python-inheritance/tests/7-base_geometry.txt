@@ -43,9 +43,9 @@ The `integer_validator` method validates value:
 Traceback (most recent call last):
 TypeError: test must be an integer
 
->>> bg.integer_validator("test", -5)
+>>> bg.integer_validator("age", -5)
 Traceback (most recent call
-ValueError: test must be greater than 0
+ValueError: age must be greater than 0
 
 >>> bg.integer_validator("test", 0)
 Traceback (most recent call last):
@@ -53,4 +53,4 @@ ValueError: test must be greater than 0
 
 >>> bg.integer_validation("age", None)
 Traceback (most recent call last):
-ValueError: test must be greater than 0
+ValueError: age must be greater than 0
