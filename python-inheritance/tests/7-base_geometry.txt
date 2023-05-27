@@ -11,6 +11,6 @@ This module write a class Rectangle that inherits from BaseGeometry
 
 ...
 
->>> bgeo = BaseGeometry(None)
+>>> Bgeo = BaseGeometry(None)
 Traceback (most recent call last):
 TypeError: object() takes no parameter
