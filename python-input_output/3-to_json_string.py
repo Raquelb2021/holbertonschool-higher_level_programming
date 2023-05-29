@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""Using Json bult-in package"""
-
-import json
-"""Import json to convert a python object into a json string"""
+"""Task 3 Json string"""
 
 
 def to_json_string(my_obj):
@@ -21,6 +18,5 @@ def to_json_string(my_obj):
     Returns:
     A string containing the JSON representation of the input object.
     """
-
-
-return json.dumps(my_obj)
+    import json
+    return json.dumps(my_obj)
