@@ -2,6 +2,7 @@
 """Import json to convert a python object into a json string"""
 
 import json
+def to_json_string(my_obj):
 """
 Returns th JSON representation of an object as a string
 
@@ -16,7 +17,4 @@ Args:
     Returns:
     A string containing the JSON representation of the input object.
     """
-
-
-def to_json_string(my_obj):
     return json.dumps(my_obj)
