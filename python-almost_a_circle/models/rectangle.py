@@ -4,6 +4,7 @@ class rectangle inherits from Base class
 """
 from models.base import Base
 
+
 class Rectangle(Base):
     """initializes base class
     with private attributes
