@@ -13,7 +13,7 @@ class TestBase(unittest.TestCase):
         b = Base()
         self.assertEqual(Base._Base__nb_objects, 1)
 
-    def test_with_id(self):
+    def test_auto_id(self):
         """testing with id value"""
         b = Base(100)
         self.assertEqual(b.id, 100)
