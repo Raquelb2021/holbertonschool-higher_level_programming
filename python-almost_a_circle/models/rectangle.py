@@ -81,8 +81,15 @@ class Rectangle(Base):
         """
         prints the rectangle instance using the # character
         """
+        print("\n" * self.y, end="")
+        """print self.y newlines to move the rectangle down,
+        by self.y rows
+        """
         for i in range(self.height):
-            print("#" * self.width)
+            print(" " * self.x + '#' * self.width)
+            """spaces to move the rectangle to the right by self.x columns
+            before printing the # characters
+            """
 
     def __str__(self):
         """Update the class Rectangle by overriding the __str__ method """
