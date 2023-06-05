@@ -31,10 +31,10 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Update the class Square"""
+        attributes = ["id", "size", "x", "y"]
         if args:
-            attributes = ["id", "size", "x", "y"]
             for i, arg in zip(attributes, args):
-                setattr(self, attributes[i], arg)
+                setattr(self, i, arg)
         elif kwargs:
             for key, value in kwargs.items():
                 if key in attributes:
