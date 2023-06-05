@@ -33,10 +33,9 @@ class Square(Rectangle):
         """Update the class Square"""
         if args:
             attributes = ["id", "size", "x", "y"]
-            for i, arg in enumerate(args):
-                if i < len(attributes):
-                    setattr(self, attributes[i], arg)
-                else:
-                    for key, value in kwargs.items():
-                        if hasattr(self, key):
-                            setattr(self, key, value)
+            for i, arg in zip(attributes, args):
+                setattr(self, attributes[i], arg)
+        elif kwargs:
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)
