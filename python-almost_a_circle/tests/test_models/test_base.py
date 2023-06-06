@@ -6,10 +6,13 @@ from models.base import Base
 class TestBase(unittest.TestCase):
 
     def setUp(self):
+        print("setUp")
         Base._Base__nb_objects = 0
 
     def tearDown(self):
+        print("tearDown")
         Base._Base__nb_objects = 0
+        del self.Base
 
     def test_id_auto_assignment(self):
         b1 = Base()
