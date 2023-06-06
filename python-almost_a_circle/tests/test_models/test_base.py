@@ -4,6 +4,7 @@ import json
 import unittest
 from models.base import Base
 
+
 class TestBase(unittest.TestCase):
 
     def setUp(self):
@@ -34,6 +35,6 @@ class TestBase(unittest.TestCase):
         json_str = Base.to_json_string([{'id': 12}])
         self.assertEqual(json_str, '[{"id": 12}]')
 
+
 if __name__ == '__main__':
     unittest.main()
-
