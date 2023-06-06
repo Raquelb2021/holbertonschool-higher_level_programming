@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import json
 import unittest
 from models.base import Base
 
@@ -26,14 +27,10 @@ class TestBase(unittest.TestCase):
         self.assertEqual(base3.id, 12)
 
     def test_to_json_string_none(self):
-        json_str = Base.to_json_string(None)
-        self.assertEqual(json_str, "[]")
+        self.assertEqual(Base.to_json_string(None), "[]")
+        self.assertEqual(Base.to_json_string([]), "[]")
 
-    def test_to_json_string_empty(self):
-        json_str = Base.to_json_string([])
-        self.assertEqual(json_str, "[]")
-
-    def test_to_json_string_dict(self):
+    def test_to_json_string_with_dict(self):
         json_str = Base.to_json_string([{'id': 12}])
         self.assertEqual(json_str, '[{"id": 12}]')
 
