@@ -7,23 +7,23 @@ class TestBase(unittest.TestCase):
 
     def setUp(self):
         print("setUp")
+        self.base = Base()
         Base._Base__nb_objects = 0
 
     def tearDown(self):
         print("tearDown")
-        Base._Base__nb_objects = 0
-        del self.Base
+        del self.base
 
     def test_id_auto_assignment(self):
-        b1 = Base()
-        self.assertEqual(b1.id, 1)
+        base1 = Base()
+        self.assertEqual(base1.id, 1)
 
-        b2 = Base()
-        self.assertEqual(b2.id, 2)
+        base2 = Base()
+        self.assertEqual(base2.id, 2)
 
     def test_id_manual_assignment(self):
-        b3 = Base(12)
-        self.assertEqual(b3.id, 12)
+        base3 = Base(12)
+        self.assertEqual(base3.id, 12)
 
     def test_to_json_string_none(self):
         json_str = Base.to_json_string(None)

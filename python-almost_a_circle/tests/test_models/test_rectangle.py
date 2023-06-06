@@ -7,3 +7,10 @@ from models.rectangle import Rectangle
 
 class testRectangle(unittest.TestCase):
 
+    def setUp(self):
+        print("SetUp")
+        Base._Base__nb_objects = 0
+
+    def tearDown(self):
+        print("tearDown")
+        del self.rectangle
