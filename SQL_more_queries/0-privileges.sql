@@ -1,3 +1,4 @@
+-- lists all privileges of the MySQL users user_0d_1 and user_0d_2
 import mysql.connector
 
 # Connect to the MySQL server
